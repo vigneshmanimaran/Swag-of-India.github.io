@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,400i,700");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Raleway, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  font-family: "Nunito", sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
+a {
+  text-decoration: none;
+}
+
+a.arrow {
+  position: relative;
+  padding-left: 0px;
+  padding-right: 32px;
+}
+a.arrow::after {
+  position: absolute;
+  color: inherit;
+  width: 32px;
+  transition: all 0.5s;
+  font-size: 1.5rem;
+  top: 0px;
+}
+a.arrow::after {
+  content: "⟶";
+  right: -0.5rem;
+}
+a.arrow:hover::after {
+  transform: translateX(1rem);
+}
+
+a.arrow.is-ar-reverse {
+  position: relative;
+  padding-left: 32px;
+  padding-right: 0px;
+}
+a.arrow.is-ar-reverse::before {
+  position: absolute;
+  color: inherit;
+  width: 32px;
+  transition: all 0.5s;
+  font-size: 1.5rem;
+  top: 8px;
+}
+a.arrow.is-ar-reverse::before {
+  content: "⟵";
+  left: -0.5rem;
+}
+a.arrow.is-ar-reverse:hover::before {
+  transform: translateX(-1rem);
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-item.reverse {
+  flex-direction: row;
+}
+.p-item.reverse .info {
+  text-align: right;
+}
+
+.back-to-top {
+  position: fixed !important;
+  right: 1rem;
+  bottom: 40px;
+  padding: 8px;
+  font-size: 0.9rem;
+  line-height: 1em;
+  outline: none !important;
+  transform-origin: 100% 100%;
+  transform: rotate(-90deg) translate(100%, 0);
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.show {
+  visibility: visible;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+#scrollUp {
+  font-size: 50px;
+  color: #0000ffb5;
+  position: sticky;
+  left: 1313px;
+  bottom: 50px;
+  cursor: pointer;
+}
+.sticky {
+  left: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background: #fff;
+  width: 100%;
+}
