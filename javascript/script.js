@@ -6,7 +6,7 @@ new Vue({
         color: "#FBC02D",
         type: "Website",
         category: "UI/UX",
-        image: "images/Home page.png", 
+        image: "images/Home Page.png", 
         summary: 'Home Page',
         description: 'In this webpage I created Homepage of the webpage. I designed the webpage with HTML5,CSS,BOOTSTRAP and few percentage of Javascript. I will add 100% behaviour in future.',
         link: "https://vigneshmanimaran.github.io/Home-Page.github.io/",
